@@ -3,7 +3,6 @@
     margin:0;
     padding: 0 2rem;
      overflow:none;
-    /* margin-bottom: 50px; */
     justify-content: left;
 }
 ul {
@@ -19,28 +18,19 @@ li {
     margin-bottom: 50px;
     background-color: wheat;
   }
-.Search-container {
-   margin: 0 auto;
-   padding: 0;
-   box-sizing:border-box;
-   color:#fff;
-   width:80%;
-   height: 100%;
-   padding-bottom: 10px;
-    
-}
+
 .weather-header {
     padding: 50px;
-    /* text-align: center; */
     color: white;
     font-size: 30px;
+    margin-top: -12%;
+    
 }
 
 .weather-header h3 {
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 2px;
-  /* text-align:center; */
   margin-top:5px;
 }
 
@@ -53,29 +43,26 @@ li {
 .search-container {
     float: right;
     background: transparent;
+    margin-top:-11%;
+    padding-right:10%;
   
 }
 .search-input {
-   
     padding: 6px;
-    margin-top: 8px;
+    padding-top:10px;
     font-size: 17px;
     border: none;
-   
 
 }
 .search-container button {
     float: right;
     padding: 9.8px 10px;
-    margin-top: 8px;
+    margin-top: 9px;
     background: #ddd;
     font-size: 17px;
     border: none;
     cursor: pointer;
 }
-
-
-
 .weather-header button:hover{
     background: #ccc;
 }
@@ -113,6 +100,7 @@ li {
     top: 5px;
     left: 5px;
     animation: rotate 5s infinite linear;
+    
 }
 
 @keyframes rotate {
@@ -120,7 +108,6 @@ li {
         transform: rotate(360deg)
     }
 }
-
 
 .header-desription{
     text-align: center;
@@ -160,8 +147,41 @@ li {
     margin-bottom: 20px;
 
 } 
-.date{
-margin-left:1000px;
-display:inline-flex
-;
+
+.weather-information{
+    float: left;
+    margin: auto;
+    font-size:1.3rem;
+    background-color: transparent ;
+  } 
+  .weather-information button {
+   
+    float: left;
+    padding: 3px 5px;
+    margin-bottom: 20px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+
+  } 
+  .weather-informationbutton:hover {
+      color: yellow;
+  } 
+ 
+
+
+.fav {
+display:grid;
+grid-template-columns: repeat(5, 1fr);
+grid-gap: 1.2rem;
+justify-content: center;
+text-align: center;
+margin-bottom: 20px;
+}
+.fav h1{
+    font-size:30px;
+}
+.iccons button{
+    margin-top: -400px;
 }

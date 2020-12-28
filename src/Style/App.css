@@ -1,11 +1,81 @@
-body {
-  /* background-image: url('background.png'); */
-  background-color: #D6D;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+
+body {
+  background-image: url('../background.png');
+  background-size: cover;
+  background-color: #D6D;
   color: #dcdcdc;
   margin: 0;
   padding: 0%;
-  height:200px;
+  height:100%;
   width: 100%;
 
 
@@ -13,11 +83,25 @@ body {
 }
 
 .app-container {
-  /* border:2px solid black; */
-  display: inline;
-  flex-direction: column;
-  overflow: hidden;
-  /* justify-content: center; */
+  margin-top: 9%;
   height:100 vh;
-  /* align-items: center; */
 }
+.page{
+  padding-right: 7%;
+  padding-left: 7%;
+}
+
+.date{
+  margin-left:65%;
+  height: 60px;
+  width: 200px;
+  margin-top:8px;
+  
+  }
+  .logo {
+    margin-top: 50px;
+    margin-left: 100px ;
+    background: url('logo_web.png') no-repeat center center/cover;
+    height: 32px;
+    width: 150px;
+    }
