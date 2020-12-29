@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from "react-ro
 import Favourites from './Favourites';
 import RecentSearch from './RecentSearch';
 import React, { useState } from "react";
+import {useLocalStorageState} from "./useLocalStorageState"
 
 function App() {
     const [info, setinfo] = useState([]);

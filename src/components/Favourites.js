@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../Style/Weather.css'
+import { useLocalStorageState } from "./useLocalStorageState";
 function Favourites({ info, setinfo }) {
     const [s, setS] = useState();
     const removeall = () => {
@@ -13,6 +14,7 @@ function Favourites({ info, setinfo }) {
     return (
         <div >
             <div>
+            <p>{info.length}city is added to favourites</p>
                 <button onClick={removeall} className="remove">Remove all</button>
             </div>
             {info.map((menuItem) => {

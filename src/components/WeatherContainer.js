@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import "../Style/Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import {useLocalStorageState} from './useLocalStorageState';
+
 function WeatherConatiner({ info, setinfo, rsearch, setrsearch }) {
     const API_KEY = '95e28a2d85088fba5803a098a4ffc732';
     const [searchQuery, setSearchQuery] = useState();
     const [weatherdata, setweatherdata] = useState([]);
 
     function updateSearchQuery(event) {
+    
         let name = event.target.value;
         setSearchQuery(name);
+        
     }
     const recentSearch = () => {
         let Information = rsearch.concat({ names: weatherdata.city, icons: weatherdata.icon, tempCs: weatherdata.tempC, descs: weatherdata.details });
@@ -17,7 +21,12 @@ function WeatherConatiner({ info, setinfo, rsearch, setrsearch }) {
     }
 
     function getWeatherdata() {
-
+        if(searchQuery == ""){
+            alert("add");
+            
+        }
+else
+{  
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=${API_KEY}`).then(response => response.json())
             .then(data => setweatherdata({
                 tempC: convertToCelius(data.main.temp),
@@ -36,7 +45,7 @@ function WeatherConatiner({ info, setinfo, rsearch, setrsearch }) {
             }))
 
     }
-
+    }
     function convertToFarenheit(temp) {
         return ((temp - 273.15) * (9.0 / 5.0) + 32).toFixed(0);
     }
